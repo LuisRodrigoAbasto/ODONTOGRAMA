@@ -1,0 +1,12 @@
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\bin\Debug\CapaDato.dll.config
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\bin\Debug\CapaDato.dll
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\bin\Debug\CapaDato.pdb
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\bin\Debug\EntityFramework.dll
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\bin\Debug\EntityFramework.xml
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.csprojAssemblyReference.cache
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.csproj.CoreCompileInputs.cache
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.csproj.CopyComplete
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.dll
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.pdb

@@ -1,0 +1,6 @@
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\bin\Debug\CapaEntity.dll
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\bin\Debug\CapaEntity.pdb
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.csprojAssemblyReference.cache
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.csproj.CoreCompileInputs.cache
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.dll
+C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.pdb

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e6ad7967aa5648b2984299ec849615ca" Name="Diagram1" ZoomLevel="100">
+        <EntityTypeShape EntityType="odontogramaModel.atencion" Width="1.5" PointX="3" PointY="15.625" />
+        <EntityTypeShape EntityType="odontogramaModel.atencion_detalle" Width="1.5" PointX="5.25" PointY="1.25" />
+        <EntityTypeShape EntityType="odontogramaModel.diente" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="odontogramaModel.odontograma" Width="1.5" PointX="0.75" PointY="8.25" />
+        <EntityTypeShape EntityType="odontogramaModel.odontograma_detalle" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="odontogramaModel.paciente" Width="1.5" PointX="0.75" PointY="17.75" />
+        <EntityTypeShape EntityType="odontogramaModel.parte" Width="1.5" PointX="0.75" PointY="11.375" />
+        <EntityTypeShape EntityType="odontogramaModel.tratamiento" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="odontogramaModel.users" Width="1.5" PointX="0.75" PointY="14.25" />
+        <AssociationConnector Association="odontogramaModel.FK__atencion___atenc__276EDEB3" />
+        <AssociationConnector Association="odontogramaModel.FK__atencion__emplea__15502E78" />
+        <AssociationConnector Association="odontogramaModel.FK__atencion__odonto__164452B1" />
+        <AssociationConnector Association="odontogramaModel.FK__atencion__pacien__145C0A3F" />
+        <AssociationConnector Association="odontogramaModel.FK__atencion_detalle__286302EC" />
+        <AssociationConnector Association="odontogramaModel.FK__odontogra__dient__21B6055D" />
+        <AssociationConnector Association="odontogramaModel.FK__odontogra__odont__20C1E124" />
+        <AssociationConnector Association="odontogramaModel.FK__odontogra__diagn__239E4DCF" />
+        <AssociationConnector Association="odontogramaModel.FK__odontogra__parte__22AA2996" />
+        <AssociationConnector Association="odontogramaModel.FK__odontogra__proce__24927208" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0730C27-60D4-4FCE-B654-154E83BCB017}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3">
+      <HintPath>D:\ESCRITORIO WIND 10\Janus\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.CalendarCombo.v3">
+      <HintPath>D:\ESCRITORIO WIND 10\Janus\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3">
+      <HintPath>D:\ESCRITORIO WIND 10\Janus\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3">
+      <HintPath>D:\ESCRITORIO WIND 10\Janus\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Ribbon.v3">
+      <HintPath>D:\ESCRITORIO WIND 10\Janus\Janus.Windows.Ribbon.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3">
+      <HintPath>D:\ESCRITORIO WIND 10\Janus\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1357.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1357.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAtencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAtencion.designer.cs">
+      <DependentUpon>FrmAtencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDiente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiente.designer.cs">
+      <DependentUpon>FrmDiente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModal\FrmBuscarOdontologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModal\FrmBuscarOdontologo.designer.cs">
+      <DependentUpon>FrmBuscarOdontologo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModal\FrmBuscarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModal\FrmBuscarPaciente.designer.cs">
+      <DependentUpon>FrmBuscarPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOdontograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOdontograma.designer.cs">
+      <DependentUpon>FrmOdontograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaciente.designer.cs">
+      <DependentUpon>FrmPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParte.designer.cs">
+      <DependentUpon>FrmParte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTratamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTratamiento.designer.cs">
+      <DependentUpon>FrmTratamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario.designer.cs">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Odontograma\Atencion\FrmReporteAtencionOdontograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Odontograma\Atencion\FrmReporteAtencionOdontograma.designer.cs">
+      <DependentUpon>FrmReporteAtencionOdontograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Atencion\FrmReporteAtencionRango.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Atencion\FrmReporteAtencionRango.designer.cs">
+      <DependentUpon>FrmReporteAtencionRango.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Odontograma\Odontograma\FrmReporteOdontograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Odontograma\Odontograma\FrmReporteOdontograma.designer.cs">
+      <DependentUpon>FrmReporteOdontograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Paciente\FrmReportePacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\Paciente\FrmReportePacientes.designer.cs">
+      <DependentUpon>FrmReportePacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAtencion.resx">
+      <DependentUpon>FrmAtencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDiente.resx">
+      <DependentUpon>FrmDiente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModal\FrmBuscarOdontologo.resx">
+      <DependentUpon>FrmBuscarOdontologo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModal\FrmBuscarPaciente.resx">
+      <DependentUpon>FrmBuscarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOdontograma.resx">
+      <DependentUpon>FrmOdontograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaciente.resx">
+      <DependentUpon>FrmPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParte.resx">
+      <DependentUpon>FrmParte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTratamiento.resx">
+      <DependentUpon>FrmTratamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Odontograma\Atencion\FrmReporteAtencionOdontograma.resx">
+      <DependentUpon>FrmReporteAtencionOdontograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Atencion\FrmReporteAtencionRango.resx">
+      <DependentUpon>FrmReporteAtencionRango.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Odontograma\Odontograma\FrmReporteOdontograma.resx">
+      <DependentUpon>FrmReporteOdontograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Paciente\FrmReportePacientes.resx">
+      <DependentUpon>FrmReportePacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Odontograma\Atencion\ReporteAtencionOdontograma.rdlc" />
+    <EmbeddedResource Include="Reporte\Odontograma\Odontograma\ReporteOdontograma.rdlc" />
+    <EmbeddedResource Include="Reporte\Paciente\ReportePaciente.rdlc" />
+    <EmbeddedResource Include="Reporte\Atencion\ReporteAtencion.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CapaEntity.EAgenda.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EAtencion.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EAtencion_detalle.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.ECita.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.ECita1.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.ECita_detalle.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.ECita_detalle_odontograma.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EDiente.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EImagen.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EOdontograma.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EOdontograma_detalle.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EOdontograma_detalle_mostrar.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EOdontograma_detalle_mostrar1.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EPaciente.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EParte.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EReporteO.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EReporteOdontograma.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.ETratamiento.datasource" />
+    <None Include="Properties\DataSources\CapaEntity.EUsers.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntity\CapaEntity.csproj">
+      <Project>{930895ff-f691-4377-a3ea-a784cc840194}</Project>
+      <Name>CapaEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{a59736e6-00f2-4157-bd26-7458271f7b57}</Project>
+      <Name>CapaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\004-eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\006-anadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quitar.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limpiar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arriba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\central.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\009-mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuMaximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuMinimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuMinimizar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuPaciente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuPaciente2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuPac.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dental.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diente.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diente2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagnostico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diente3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odonto %282%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odonto %282%291.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paciente.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lateral.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoOdontoviera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\odonto_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagnostico-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico-error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuCerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar sesion.ico" />
+    <None Include="Resources\imprimir.ico" />
+    <None Include="Resources\imprimir1.ico" />
+    <None Include="Resources\home.ico" />
+    <None Include="Resources\cita.ico" />
+    <None Include="Resources\agenda2.ico" />
+    <None Include="Resources\Usuario.ico" />
+    <None Include="Resources\ODONTOLOGO.png" />
+    <None Include="Resources\whassap.png" />
+    <None Include="Resources\ubicacion.jpg" />
+    <None Include="Resources\abajoRayado.png" />
+    <None Include="Resources\arribaRayado.png" />
+    <None Include="Resources\centroRayado.png" />
+    <None Include="Resources\derechaRayado.png" />
+    <None Include="Resources\izquierdaRayado.png" />
+    <None Include="Resources\pagina_siguiente.ico" />
+    <None Include="Resources\pagina_inicio.ico" />
+    <None Include="Resources\pagina_final.ico" />
+    <None Include="Resources\pagina_anterior.ico" />
+    <None Include="Resources\abajoBien.png" />
+    <None Include="Resources\arribaBien.png" />
+    <None Include="Resources\centroBien.png" />
+    <None Include="Resources\derechaBien.png" />
+    <None Include="Resources\izquierdaBien.png" />
+    <None Include="Resources\parteDiente.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reporte\Usuario\Odontologo\" />
+    <Folder Include="Reporte\Usuario\Secretaria\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

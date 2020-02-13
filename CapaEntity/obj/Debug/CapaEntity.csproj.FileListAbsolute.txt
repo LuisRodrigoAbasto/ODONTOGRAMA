@@ -4,3 +4,8 @@ C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.csprojA
 C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.csproj.CoreCompileInputs.cache
 C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.dll
 C:\Users\VALLES\Source\Repos\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.pdb
+C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaEntity\bin\Debug\CapaEntity.dll
+C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaEntity\bin\Debug\CapaEntity.pdb
+C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.csprojAssemblyReference.cache
+C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.dll
+C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaEntity\obj\Debug\CapaEntity.pdb

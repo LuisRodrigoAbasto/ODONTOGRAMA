@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="odontogramaModelStoreContainer" CdmEntityContainer="dbodontogramaEntity">
+    <EntitySetMapping Name="atencion">
+      <EntityTypeMapping TypeName="odontogramaModel.atencion">
+        <MappingFragment StoreEntitySet="atencion">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="odontologoID" ColumnName="odontologoID" />
+          <ScalarProperty Name="empleadoID" ColumnName="empleadoID" />
+          <ScalarProperty Name="pacienteID" ColumnName="pacienteID" />
+          <ScalarProperty Name="atencionID" ColumnName="atencionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="atencion_detalle">
+      <EntityTypeMapping TypeName="odontogramaModel.atencion_detalle">
+        <MappingFragment StoreEntitySet="atencion_detalle">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="realizado" ColumnName="realizado" />
+          <ScalarProperty Name="procedimientoID" ColumnName="procedimientoID" />
+          <ScalarProperty Name="diagnosticoID" ColumnName="diagnosticoID" />
+          <ScalarProperty Name="parteID" ColumnName="parteID" />
+          <ScalarProperty Name="dienteID" ColumnName="dienteID" />
+          <ScalarProperty Name="odontogramaID" ColumnName="odontogramaID" />
+          <ScalarProperty Name="atencionID" ColumnName="atencionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="diente">
+      <EntityTypeMapping TypeName="odontogramaModel.diente">
+        <MappingFragment StoreEntitySet="diente">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="vector" ColumnName="vector" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="dienteID" ColumnName="dienteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="odontograma">
+      <EntityTypeMapping TypeName="odontogramaModel.odontograma">
+        <MappingFragment StoreEntitySet="odontograma">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tratamiento" ColumnName="tratamiento" />
+          <ScalarProperty Name="montoTotal" ColumnName="montoTotal" />
+          <ScalarProperty Name="fechaFinal" ColumnName="fechaFinal" />
+          <ScalarProperty Name="fechaInicio" ColumnName="fechaInicio" />
+          <ScalarProperty Name="odontogramaID" ColumnName="odontogramaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="odontograma_detalle">
+      <EntityTypeMapping TypeName="odontogramaModel.odontograma_detalle">
+        <MappingFragment StoreEntitySet="odontograma_detalle">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="realizado" ColumnName="realizado" />
+          <ScalarProperty Name="procedimientoID" ColumnName="procedimientoID" />
+          <ScalarProperty Name="diagnosticoID" ColumnName="diagnosticoID" />
+          <ScalarProperty Name="parteID" ColumnName="parteID" />
+          <ScalarProperty Name="dienteID" ColumnName="dienteID" />
+          <ScalarProperty Name="odontogramaID" ColumnName="odontogramaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paciente">
+      <EntityTypeMapping TypeName="odontogramaModel.paciente">
+        <MappingFragment StoreEntitySet="paciente">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="ci" ColumnName="ci" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="pacienteID" ColumnName="pacienteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parte">
+      <EntityTypeMapping TypeName="odontogramaModel.parte">
+        <MappingFragment StoreEntitySet="parte">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="parteID" ColumnName="parteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tratamiento">
+      <EntityTypeMapping TypeName="odontogramaModel.tratamiento">
+        <MappingFragment StoreEntitySet="tratamiento">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="tratamientoID" ColumnName="tratamientoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="odontogramaModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="usuarioID" ColumnName="usuarioID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

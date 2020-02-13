@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="odontogramaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbodontogramaEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="atencion" EntityType="odontogramaModel.atencion" />
+    <EntitySet Name="atencion_detalle" EntityType="odontogramaModel.atencion_detalle" />
+    <EntitySet Name="diente" EntityType="odontogramaModel.diente" />
+    <EntitySet Name="odontograma" EntityType="odontogramaModel.odontograma" />
+    <EntitySet Name="odontograma_detalle" EntityType="odontogramaModel.odontograma_detalle" />
+    <EntitySet Name="paciente" EntityType="odontogramaModel.paciente" />
+    <EntitySet Name="parte" EntityType="odontogramaModel.parte" />
+    <EntitySet Name="tratamiento" EntityType="odontogramaModel.tratamiento" />
+    <EntitySet Name="users" EntityType="odontogramaModel.users" />
+    <AssociationSet Name="FK__atencion___atenc__276EDEB3" Association="odontogramaModel.FK__atencion___atenc__276EDEB3">
+      <End Role="atencion" EntitySet="atencion" />
+      <End Role="atencion_detalle" EntitySet="atencion_detalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__atencion__emplea__15502E78" Association="odontogramaModel.FK__atencion__emplea__15502E78">
+      <End Role="users" EntitySet="users" />
+      <End Role="atencion" EntitySet="atencion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__atencion__odonto__164452B1" Association="odontogramaModel.FK__atencion__odonto__164452B1">
+      <End Role="users" EntitySet="users" />
+      <End Role="atencion" EntitySet="atencion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__atencion__pacien__145C0A3F" Association="odontogramaModel.FK__atencion__pacien__145C0A3F">
+      <End Role="paciente" EntitySet="paciente" />
+      <End Role="atencion" EntitySet="atencion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__atencion_detalle__286302EC" Association="odontogramaModel.FK__atencion_detalle__286302EC">
+      <End Role="odontograma_detalle" EntitySet="odontograma_detalle" />
+      <End Role="atencion_detalle" EntitySet="atencion_detalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__odontogra__dient__21B6055D" Association="odontogramaModel.FK__odontogra__dient__21B6055D">
+      <End Role="diente" EntitySet="diente" />
+      <End Role="odontograma_detalle" EntitySet="odontograma_detalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__odontogra__odont__20C1E124" Association="odontogramaModel.FK__odontogra__odont__20C1E124">
+      <End Role="odontograma" EntitySet="odontograma" />
+      <End Role="odontograma_detalle" EntitySet="odontograma_detalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__odontogra__diagn__239E4DCF" Association="odontogramaModel.FK__odontogra__diagn__239E4DCF">
+      <End Role="tratamiento" EntitySet="tratamiento" />
+      <End Role="odontograma_detalle" EntitySet="odontograma_detalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__odontogra__parte__22AA2996" Association="odontogramaModel.FK__odontogra__parte__22AA2996">
+      <End Role="parte" EntitySet="parte" />
+      <End Role="odontograma_detalle" EntitySet="odontograma_detalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK__odontogra__proce__24927208" Association="odontogramaModel.FK__odontogra__proce__24927208">
+      <End Role="tratamiento" EntitySet="tratamiento" />
+      <End Role="odontograma_detalle" EntitySet="odontograma_detalle" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="atencion">
+    <Key>
+      <PropertyRef Name="atencionID" />
+    </Key>
+    <Property Name="atencionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pacienteID" Type="Int32" />
+    <Property Name="empleadoID" Type="Int32" />
+    <Property Name="odontologoID" Type="Int32" />
+    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <Property Name="hora" Type="Time" Precision="7" />
+    <Property Name="importe" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="descripcion" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="atencion_detalle" Relationship="odontogramaModel.FK__atencion___atenc__276EDEB3" FromRole="atencion" ToRole="atencion_detalle" />
+    <NavigationProperty Name="empleado" Relationship="odontogramaModel.FK__atencion__emplea__15502E78" FromRole="atencion" ToRole="users" />
+    <NavigationProperty Name="odontologo" Relationship="odontogramaModel.FK__atencion__odonto__164452B1" FromRole="atencion" ToRole="users" />
+    <NavigationProperty Name="paciente" Relationship="odontogramaModel.FK__atencion__pacien__145C0A3F" FromRole="atencion" ToRole="paciente" />
+  </EntityType>
+  <EntityType Name="atencion_detalle">
+    <Key>
+      <PropertyRef Name="atencionID" />
+      <PropertyRef Name="odontogramaID" />
+      <PropertyRef Name="dienteID" />
+      <PropertyRef Name="parteID" />
+      <PropertyRef Name="diagnosticoID" />
+      <PropertyRef Name="procedimientoID" />
+    </Key>
+    <Property Name="atencionID" Type="Int32" Nullable="false" />
+    <Property Name="odontogramaID" Type="Int32" Nullable="false" />
+    <Property Name="dienteID" Type="Int32" Nullable="false" />
+    <Property Name="parteID" Type="Int32" Nullable="false" />
+    <Property Name="diagnosticoID" Type="Int32" Nullable="false" />
+    <Property Name="procedimientoID" Type="Int32" Nullable="false" />
+    <Property Name="realizado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="atencion" Relationship="odontogramaModel.FK__atencion___atenc__276EDEB3" FromRole="atencion_detalle" ToRole="atencion" />
+    <NavigationProperty Name="odontograma_detalle" Relationship="odontogramaModel.FK__atencion_detalle__286302EC" FromRole="atencion_detalle" ToRole="odontograma_detalle" />
+  </EntityType>
+  <EntityType Name="diente">
+    <Key>
+      <PropertyRef Name="dienteID" />
+    </Key>
+    <Property Name="dienteID" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vector" Type="Int32" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="odontograma_detalle" Relationship="odontogramaModel.FK__odontogra__dient__21B6055D" FromRole="diente" ToRole="odontograma_detalle" />
+  </EntityType>
+  <EntityType Name="odontograma">
+    <Key>
+      <PropertyRef Name="odontogramaID" />
+    </Key>
+    <Property Name="odontogramaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fechaInicio" Type="DateTime" Precision="0" />
+    <Property Name="fechaFinal" Type="DateTime" Precision="0" />
+    <Property Name="montoTotal" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="tratamiento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="odontograma_detalle" Relationship="odontogramaModel.FK__odontogra__odont__20C1E124" FromRole="odontograma" ToRole="odontograma_detalle" />
+  </EntityType>
+  <EntityType Name="odontograma_detalle">
+    <Key>
+      <PropertyRef Name="odontogramaID" />
+      <PropertyRef Name="dienteID" />
+      <PropertyRef Name="parteID" />
+      <PropertyRef Name="diagnosticoID" />
+      <PropertyRef Name="procedimientoID" />
+    </Key>
+    <Property Name="odontogramaID" Type="Int32" Nullable="false" />
+    <Property Name="dienteID" Type="Int32" Nullable="false" />
+    <Property Name="parteID" Type="Int32" Nullable="false" />
+    <Property Name="diagnosticoID" Type="Int32" Nullable="false" />
+    <Property Name="procedimientoID" Type="Int32" Nullable="false" />
+    <Property Name="realizado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="atencion_detalle" Relationship="odontogramaModel.FK__atencion_detalle__286302EC" FromRole="odontograma_detalle" ToRole="atencion_detalle" />
+    <NavigationProperty Name="diente" Relationship="odontogramaModel.FK__odontogra__dient__21B6055D" FromRole="odontograma_detalle" ToRole="diente" />
+    <NavigationProperty Name="odontograma" Relationship="odontogramaModel.FK__odontogra__odont__20C1E124" FromRole="odontograma_detalle" ToRole="odontograma" />
+    <NavigationProperty Name="diagnostico" Relationship="odontogramaModel.FK__odontogra__diagn__239E4DCF" FromRole="odontograma_detalle" ToRole="tratamiento" />
+    <NavigationProperty Name="parte" Relationship="odontogramaModel.FK__odontogra__parte__22AA2996" FromRole="odontograma_detalle" ToRole="parte" />
+    <NavigationProperty Name="procedimiento" Relationship="odontogramaModel.FK__odontogra__proce__24927208" FromRole="odontograma_detalle" ToRole="tratamiento" />
+  </EntityType>
+  <EntityType Name="paciente">
+    <Key>
+      <PropertyRef Name="pacienteID" />
+    </Key>
+    <Property Name="pacienteID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ci" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
+    <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="sexo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="atencion" Relationship="odontogramaModel.FK__atencion__pacien__145C0A3F" FromRole="paciente" ToRole="atencion" />
+  </EntityType>
+  <EntityType Name="parte">
+    <Key>
+      <PropertyRef Name="parteID" />
+    </Key>
+    <Property Name="parteID" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="odontograma_detalle" Relationship="odontogramaModel.FK__odontogra__parte__22AA2996" FromRole="parte" ToRole="odontograma_detalle" />
+  </EntityType>
+  <EntityType Name="tratamiento">
+    <Key>
+      <PropertyRef Name="tratamientoID" />
+    </Key>
+    <Property Name="tratamientoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="precio" Type="Decimal" Precision="20" Scale="2" />
+    <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="diagnostico" Relationship="odontogramaModel.FK__odontogra__diagn__239E4DCF" FromRole="tratamiento" ToRole="odontograma_detalle" />
+    <NavigationProperty Name="procedimiento" Relationship="odontogramaModel.FK__odontogra__proce__24927208" FromRole="tratamiento" ToRole="odontograma_detalle" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="usuarioID" />
+    </Key>
+    <Property Name="usuarioID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tipo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="estado" Type="Int32" />
+    <NavigationProperty Name="empleado" Relationship="odontogramaModel.FK__atencion__emplea__15502E78" FromRole="users" ToRole="atencion" />
+    <NavigationProperty Name="odontologo" Relationship="odontogramaModel.FK__atencion__odonto__164452B1" FromRole="users" ToRole="atencion" />
+  </EntityType>
+  <Association Name="FK__atencion___atenc__276EDEB3">
+    <End Type="odontogramaModel.atencion" Role="atencion" Multiplicity="1" />
+    <End Type="odontogramaModel.atencion_detalle" Role="atencion_detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="atencion">
+        <PropertyRef Name="atencionID" />
+      </Principal>
+      <Dependent Role="atencion_detalle">
+        <PropertyRef Name="atencionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__atencion__emplea__15502E78">
+    <End Type="odontogramaModel.users" Role="users" Multiplicity="0..1" />
+    <End Type="odontogramaModel.atencion" Role="atencion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="atencion">
+        <PropertyRef Name="empleadoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__atencion__odonto__164452B1">
+    <End Type="odontogramaModel.users" Role="users" Multiplicity="0..1" />
+    <End Type="odontogramaModel.atencion" Role="atencion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="usuarioID" />
+      </Principal>
+      <Dependent Role="atencion">
+        <PropertyRef Name="odontologoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__atencion__pacien__145C0A3F">
+    <End Type="odontogramaModel.paciente" Role="paciente" Multiplicity="0..1" />
+    <End Type="odontogramaModel.atencion" Role="atencion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="paciente">
+        <PropertyRef Name="pacienteID" />
+      </Principal>
+      <Dependent Role="atencion">
+        <PropertyRef Name="pacienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__atencion_detalle__286302EC">
+    <End Type="odontogramaModel.odontograma_detalle" Role="odontograma_detalle" Multiplicity="1" />
+    <End Type="odontogramaModel.atencion_detalle" Role="atencion_detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="odontograma_detalle">
+        <PropertyRef Name="odontogramaID" />
+        <PropertyRef Name="dienteID" />
+        <PropertyRef Name="parteID" />
+        <PropertyRef Name="diagnosticoID" />
+        <PropertyRef Name="procedimientoID" />
+      </Principal>
+      <Dependent Role="atencion_detalle">
+        <PropertyRef Name="odontogramaID" />
+        <PropertyRef Name="dienteID" />
+        <PropertyRef Name="parteID" />
+        <PropertyRef Name="diagnosticoID" />
+        <PropertyRef Name="procedimientoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__odontogra__dient__21B6055D">
+    <End Type="odontogramaModel.diente" Role="diente" Multiplicity="1" />
+    <End Type="odontogramaModel.odontograma_detalle" Role="odontograma_detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="diente">
+        <PropertyRef Name="dienteID" />
+      </Principal>
+      <Dependent Role="odontograma_detalle">
+        <PropertyRef Name="dienteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__odontogra__odont__20C1E124">
+    <End Type="odontogramaModel.odontograma" Role="odontograma" Multiplicity="1" />
+    <End Type="odontogramaModel.odontograma_detalle" Role="odontograma_detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="odontograma">
+        <PropertyRef Name="odontogramaID" />
+      </Principal>
+      <Dependent Role="odontograma_detalle">
+        <PropertyRef Name="odontogramaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__odontogra__diagn__239E4DCF">
+    <End Type="odontogramaModel.tratamiento" Role="tratamiento" Multiplicity="1" />
+    <End Type="odontogramaModel.odontograma_detalle" Role="odontograma_detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tratamiento">
+        <PropertyRef Name="tratamientoID" />
+      </Principal>
+      <Dependent Role="odontograma_detalle">
+        <PropertyRef Name="diagnosticoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__odontogra__parte__22AA2996">
+    <End Type="odontogramaModel.parte" Role="parte" Multiplicity="1" />
+    <End Type="odontogramaModel.odontograma_detalle" Role="odontograma_detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="parte">
+        <PropertyRef Name="parteID" />
+      </Principal>
+      <Dependent Role="odontograma_detalle">
+        <PropertyRef Name="parteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__odontogra__proce__24927208">
+    <End Type="odontogramaModel.tratamiento" Role="tratamiento" Multiplicity="1" />
+    <End Type="odontogramaModel.odontograma_detalle" Role="odontograma_detalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tratamiento">
+        <PropertyRef Name="tratamientoID" />
+      </Principal>
+      <Dependent Role="odontograma_detalle">
+        <PropertyRef Name="procedimientoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

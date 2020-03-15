@@ -65,6 +65,7 @@ C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaDato\bin\Debug\System.Memory.xml
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaDato\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaDato\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.csprojAssemblyReference.cache
+C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.csproj.CoreCompileInputs.cache
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.csproj.CopyComplete
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.dll
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaDato\obj\Debug\CapaDato.pdb

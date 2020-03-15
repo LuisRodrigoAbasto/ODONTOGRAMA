@@ -28,6 +28,7 @@ C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaNegocio\bin\Debug\CapaEntity.pdb
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaNegocio\bin\Debug\EntityFramework.xml
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaNegocio\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\vida1\source\repos\SQL\ODONTOGRAMA\CapaNegocio\obj\Debug\CapaNegocio.pdb
